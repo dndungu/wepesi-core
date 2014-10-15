@@ -1,0 +1,27 @@
+{
+  "name": "wepesi-core",
+  "version": "0.0.1",
+  "description": "The core module for Wepesi content repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnjuguna/wepesi-core.git"
+  },
+  "keywords": [
+    "wepesi",
+    "content",
+    "repository",
+    "rest",
+    "api",
+    "cms"
+  ],
+  "author": "David Njuguna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dnjuguna/wepesi-core/issues"
+  },
+  "homepage": "https://github.com/dnjuguna/wepesi-core"
+}

@@ -1,0 +1,15 @@
+[
+	{
+		"matches": ["/<collection>/<_id>", "/<collection>"],
+		"type" : "json",
+        "modules" : [
+            {
+                "module" : "wepesi-repository",
+                "handler" : "repository",
+                "permissions" : ["public.permission"],
+                "cache" : 15
+            }
+        ],
+		"permissions": ["public.permission"]
+	}
+]
