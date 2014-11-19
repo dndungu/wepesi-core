@@ -1,0 +1,128 @@
+@colorOne: #f26822;
+@colorTwo: #231f20;
+@colorThree: #ffffff;
+@colorFour: #2c2a2a;
+@colorFive: #1b1718;
+@colorSix:#f2f2f2;
+
+* {
+	font-family: 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+
+header, main{
+	display:inline-block;
+	position:absolute;
+}
+
+header {
+	right:84%;
+	left:0;
+	top:0;
+	bottom:0;
+}
+
+main {
+	left:16%;
+	top:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	padding:0 0 16px 0;
+	background:@colorSix;
+}
+
+header {
+	background-color:@colorTwo;
+}
+
+header a {
+	color: @colorThree;
+	cursor:pointer;
+	text-align:center;
+	display:block;
+}
+
+header a:hover {
+	color: @colorOne;
+}
+
+header nav>ul>li {
+	display:block;
+	border-top: 1px solid @colorFour;
+	border-bottom: 1px solid @colorFive;
+}
+
+header nav>ul {
+	border-top: 1px solid @colorFive;
+	border-bottom: 1px solid @colorFour;
+}
+
+header nav ul li ul {
+	border-bottom:1px solid @colorSix;
+	background: @colorThree;
+	display: none;
+	position: absolute;
+	bottom:0;
+	left: 100%;
+	width: 200%;
+	top: 81px;
+}
+
+header nav ul li ul li {
+	border-top:1px solid @colorSix;
+}
+
+header nav ul li ul li:hover {
+	background:@colorSix;
+}
+
+header nav ul li ul a {
+	text-align: left;
+	color:@colorTwo;
+	padding:.5em 0 .5em 1em;
+}
+
+header nav ul a.current + ul {
+	display:block;
+}
+
+header h1 a {
+	margin:13px 0;
+}
+
+header nav>ul>li>a {
+	padding:1.5em 0;
+}
+
+header a i.fa {
+	display:inline-block;
+	font-size:1.25em;
+	padding:0 0 4px 0;
+}
+
+@media screen and (min-width:32em) {
+	header {
+		right:84%;
+	}
+	main {
+		left:16%;
+	}
+}
+
+@media screen and (min-width:64em) {
+	header {
+		right:88%;
+	}
+	main {
+		left:12%;
+	}
+}
+
+@media screen and (min-width:72em) {
+	header {
+		right:92%;
+	}
+	main {
+		left:24%;
+	}
+}

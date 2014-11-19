@@ -1,0 +1,58 @@
+nav a{
+	display:inline-block;
+}
+
+nav>ul,
+nav>ul a {
+	width:100%;
+	display:block;
+}
+
+nav>ul>li {
+	width:auto;
+	display:inline-block;
+}
+
+nav>ul>li>a{
+	padding:8px 16px 8px 8px;
+}
+
+nav>ul>li:last-child {
+	position:relative;
+}
+
+nav>ul>li:last-child>a {
+	padding-right:0;
+}
+
+nav>ul>li:last-child>ul {
+	left:auto;
+	right:0;
+}
+
+nav>ul>li>ul {
+	position:absolute;
+	display:none;
+}
+
+nav>ul>li>ul {
+	margin-left:-8px;
+}
+
+nav>ul>li:hover ul {
+	display:block;
+}
+
+nav>ul>li>ul>li {
+	min-width:168px;
+	display:block;
+	vertical-align:top;
+}
+
+nav>ul>li>ul>li a {
+	padding:4px 16px;
+}
+
+nav>ul>li>ul>li.has-children {
+	display:inline-block;
+}

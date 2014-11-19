@@ -1,0 +1,242 @@
+@duration: .6s;
+@half: .5em;
+@single: 1em;
+@double: 2em;
+@triple: 3em;
+@messageColor: #f9edbe;
+@errorColor: #fbe2e5;
+@errorBackground: #ffdbdb;
+@borderRadius: 4px;
+
+* {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all @duration;
+	-moz-transition: all @duration;
+	-o-transition: all @duration;
+	-ms-transition: all @duration;
+	transition: all @duration;
+	behavior: url(/themes/default/behaviours/boxsizing.htc);
+}
+
+.text-left {
+	text-align:left
+}
+
+.text-center {
+	text-align:center;
+}
+
+.text-right {
+	text-align:right;
+}
+
+.text-justify {
+    text-align:justify;
+}
+
+.capitalize {
+	text-transform:capitalize;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.lowercase {
+	text-transform:lowercase;
+}
+
+.uppercase {
+	text-transform:uppercase;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.pull-left, .pull-right {
+	display:inline-block;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.row {
+	display: block
+	width:100%;
+}
+
+.circle {
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+}
+
+.half-column-padding {
+	padding-right: @half;
+	padding-left: @half;
+}
+
+.column-padding {
+	padding-right: @single;
+	padding-left: @single;
+}
+
+.double-column-padding {
+	padding-right: @double;
+	padding-left: @double;
+}
+
+.half-row-padding {
+    padding-top: @half;
+    padding-bottom: @half;
+}
+
+.row-padding {
+	padding-top: @single;
+	padding-bottom: @single;
+}
+
+.double-row-padding {
+	padding-top: @double;
+	padding-bottom: @double;
+}
+
+.triple-row-padding {
+	padding-top: @triple;
+	padding-bottom: @triple;
+}
+
+.half-space-top {
+	margin-top: @half;
+}
+
+.space-top {
+	margin-top: @single;
+}
+
+.double-space-top {
+	margin-top: @double;
+}
+
+.triple-space-top {
+	margin-top: @triple;
+}
+
+.half-space-left {
+    margin-left: @half;
+}
+
+.space-left {
+	margin-left: @single;
+}
+
+.double-space-left {
+	margin-left: @double;
+}
+
+.triple-space-left {
+    margin-left: @triple;
+}
+
+.half-space-right {
+    margin-right: @half;
+}
+
+.space-right {
+    margin-right: @single;
+}
+
+.double-space-right {
+    margin-right: @double;
+}
+
+.triple-space-right {
+    margin-right: @triple;
+}
+
+.half-space-all {
+    margin: @half;
+}
+
+.space-all {
+	margin: @single;
+}
+
+.double-space-all {
+    margin: @double;
+}
+
+.triple-space-all {
+    margin: @triple;
+}
+
+.message-box {
+	background-color: @messageColor;
+}
+
+.error-box {
+	background-color: @errorColor;
+}
+
+.circular {
+    -webkit-border-radius: 9999px;
+    -moz-border-radius: 9999px;
+    border-radius: 9999px
+}
+
+.round-corners {
+	-webkit-border-radius: @borderRadius;
+	-moz-border-radius: @borderRadius;
+	border-radius: @borderRadius;
+}
+
+.image-contain {
+	background: center center scroll no-repeat transparent;
+	background-size: contain;
+}
+
+.image-cover {
+	background: center center scroll no-repeat transparent;
+	background-size: cover;
+}
+
+.text-strike {
+    text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.valid-input {
+	border:1px solid @messageColor;
+}
+
+.invalid-input {
+	border:1px solid @errorColor;
+	background-color: @errorBackground;
+}
+
+small {
+	opacity: 0.5;
+}
+
+.invisible {
+    margin:0;
+    padding:0;
+    width:0;
+    height:0;
+    visibility:hidden;
+}

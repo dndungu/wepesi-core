@@ -1,15 +1,98 @@
 [
 	{
-		"matches": ["/<collection>/<_id>", "/<collection>"],
-		"type" : "json",
+		"matches" : ["/"],
+		"type" : "text/html",
+		"xsl" : "app.xsl",
+		"modules" : [
+			{
+				"module" : "wepesi-core",
+				"handler" : "webpage",
+				"permissions" : ["public.permission"],
+				"cache" : 0
+			}
+		],
+		"permissions": ["public.permission"]
+	},
+	{
+		"matches": ["/api/<collection>/<_id>", "/api/<collection>"],
+		"type" : "application/json",
+		"modules" : [
+		    {
+			"module" : "wepesi-repository",
+			"handler" : "repository",
+			"permissions" : ["public.permission"],
+			"cache" : 15
+		    }
+		],
+		"permissions": ["public.permission"]
+	},
+	{
+		"matches" : ["/css/app.css"],
+		"type" : "text/plain",
+		"modules" : [
+			{
+				"module" : "wepesi-core",
+				"handler" : "less",
+				"permissions" : ["public.permission"],
+				"cache" : 0
+			}
+		],
+		"permissions": ["public.permission"],
+		"parameters" : [
+			"public/less/common.less",
+			"public/less/grid.less",
+			"public/less/form.less",
+			"public/less/typography.less",
+			"public/less/wepesi.less",
+			"public/less/app.less"
+		]
+	},
+	{
+		"matches" : ["/images/<path>"],
+		"type" : "text",
+                "modules" : [
+                        {
+                                "module" : "wepesi-core",
+                                "handler" : "images",
+                                "permissions" : ["public.permission"],
+                                "cache" : 0
+                        }
+               ],
+		"permissions": ["public.permission"]		
+	},
+    {
+        "matches" : ["/js/main-0.0.1.js"],
+        "type" : "application/javascript",
         "modules" : [
             {
-                "module" : "wepesi-repository",
-                "handler" : "repository",
+                "module" : "wepesi-core",
+                "handler" : "js",
                 "permissions" : ["public.permission"],
-                "cache" : 15
+                "cache" : 0
             }
         ],
-		"permissions": ["public.permission"]
-	}
+        "permissions": ["public.permission"],
+        "parameters" : [
+            "public/js/lib/sizzle/sizzle.min.js",
+            "public/js/core/gereji.js",
+            "public/js/core/gereji.broker.js",
+            "public/js/core/gereji.sync.js",
+            "public/js/core/gereji.storage.js",
+            "public/js/core/gereji.validator.js",
+            "public/js/core/gereji.model.js",
+            "public/js/core/gereji.collection.js",
+            "public/js/core/gereji.xslt.js",
+            "public/js/core/gereji.query.js",
+            "public/js/core/gereji.mime.js",
+            "public/js/core/gereji.entities.js",
+            "public/js/core/gereji.view.js",
+            "public/js/core/gereji.view.form.js",
+            "public/js/core/gereji.view.list.js",
+            "public/js/core/gereji.os.js",
+            "public/js/apps/app.js",
+            "public/js/apps/events.js",
+            "public/js/apps/history.js",
+            "public/js/apps/form.js"
+        ]
+    }
 ]
